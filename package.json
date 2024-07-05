@@ -1,0 +1,21 @@
+{
+  "name": "my-moose-app",
+  "version": "0.0",
+  "scripts": {
+    "dev": "moose-cli dev",
+    "build": "moose-cli build --docker",
+    "moose": "moose-cli"
+  },
+  "dependencies": {
+    "@514labs/moose-lib": "latest",
+    "fastq": "1.17.1",
+    "@clickhouse/client-web": "1.1.0",
+    "kafkajs": "2.2.4"
+  },
+  "devDependencies": {
+    "@514labs/moose-cli": "latest",
+    "typescript": "~5.4.0",
+    "@types/node": "^20.12.12",
+    "ts-patch": "~3.2.0"
+  }
+}
