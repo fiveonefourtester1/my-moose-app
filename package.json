@@ -3,7 +3,7 @@
   "version": "0.0",
   "scripts": {
     "dev": "moose-cli dev",
-    "build": "moose-cli build --docker --arm64",
+    "build": "moose-cli build --docker --amd64",
     "moose": "moose-cli"
   },
   "dependencies": {
