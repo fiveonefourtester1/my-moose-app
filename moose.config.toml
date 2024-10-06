@@ -4,6 +4,7 @@ language = "Typescript"
 broker = "localhost:19092"
 message_timeout_ms = 1000
 retention_ms = 30000
+replication_factor = 1
 
 [clickhouse_config]
 db_name = "local"
@@ -17,6 +18,11 @@ native_port = 9000
 [http_server_config]
 host = "localhost"
 port = 4000
+management_port = 5001
+
+[redis_config]
+url = "redis://127.0.0.1:6379"
+key_prefix = "MS"
 
 [git_config]
 main_branch_name = "main"
