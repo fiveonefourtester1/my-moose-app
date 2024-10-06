@@ -7,7 +7,7 @@ export interface UserActivity {
     eventId: Key<string>;
     timestamp: string;
     userId: string;
-    activity: string;
+    activity: stringg
 }
 
 export interface ParsedActivity {
