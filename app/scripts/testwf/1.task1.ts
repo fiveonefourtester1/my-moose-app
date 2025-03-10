@@ -1,15 +1,16 @@
 import { TaskFunction, TaskDefinition } from "@514labs/moose-lib";
 
-// The initial input data and data passed between tasks can be
-// defined in the task function parameter
-const task1: TaskFunction = async (input?: any) => {
-    // The body of your script goes here
-    console.log("Hello world from task1");
+interface TaskParams {
+    name: string;
+    age: number;
+    city: string;
+}
 
-    // The return value is the output of the script.
-    // The return value should be a dictionary with at least:
-    // - task: the task name (e.g., "extract", "transform")
-    // - data: the actual data being passed to the next task
+const task1: TaskFunction = async (input: TaskParams) => {
+    const id = `${input.name}-${input.age}-${input.city}`;
+    console.log(`task1 id: ${id}`);
+    console.log(`task1 input: ${JSON.stringify(input)}`);
+
     return {
         task: "task1",
         data: {}

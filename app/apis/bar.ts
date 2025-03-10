@@ -4,6 +4,8 @@ import {
 } from "@514labs/moose-lib";
 import { tags } from "typia";
 
+// curl "http://localhost:4000/consumption/bar?orderBy=totalRows"
+
 // This file is where you can define your APIs to consume your data
 interface QueryParams {
   orderBy: "totalRows" | "rowsWithText" | "maxTextLength" | "totalTextLength";
@@ -30,7 +32,7 @@ export default createConsumptionApi<QueryParams>(
       LIMIT ${limit}
     `;
 
-    const data = await client.query<{
+    const data = await client.query.execute<{
       dayOfMonth: number;
       totalRows?: number;
       rowsWithText?: number;
