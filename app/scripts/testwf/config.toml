@@ -1,5 +1,5 @@
 name = 'testwf'
-schedule = ''
+schedule = '@every 1m'
 retries = 1
 timeout = '3m'
 tasks = [
