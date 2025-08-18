@@ -31,7 +31,6 @@ main_branch_name = "main"
 db_user = "temporal"
 db_password = "temporal"
 db_port = 5432
-temporal_host = "localhost"
 temporal_port = 7233
 temporal_version = "1.22.3"
 admin_tools_version = "1.22.3"
@@ -40,16 +39,10 @@ ui_port = 8080
 ui_cors_origins = "http://localhost:3000"
 config_path = "config/dynamicconfig/development-sql.yaml"
 postgresql_version = "13"
-client_cert = ""
-client_key = ""
-ca_cert = ""
-api_key = ""
-
 
 [supported_old_versions]
-
-[authentication]
 
 [features]
 streaming_engine = true
 workflows = true
+data_model_v2 = true
