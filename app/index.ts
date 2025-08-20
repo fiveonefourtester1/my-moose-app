@@ -6,3 +6,5 @@ export * from "./views/barAggregated";
 export * from "./scripts/generateRandom";
 
 build error
+
+pls
