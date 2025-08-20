@@ -5,6 +5,3 @@ export * from "./apis/bar";
 export * from "./views/barAggregated";
 export * from "./scripts/generateRandom";
 
-build error
-
-pls
