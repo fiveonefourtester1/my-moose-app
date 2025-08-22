@@ -28,19 +28,3 @@ export const BarAggregatedMV = new MaterializedView<BarAggregated>({
   `,
   selectTables: [barTable],
 });
-
-export const BarAggregatedMV2 = new MaterializedView<BarAggregated>({
-  tableName: "BarAggregated2",
-  materializedViewName: "BarAggregated2_MV",
-  orderByFields: ["dayOfMonth"],
-  selectStatement: sql`SELECT
-    toDayOfMonth(${barColumns.utcTimestamp}) as dayOfMonth,
-    count(${barColumns.primaryKey}) as totalRows,
-    countIf(${barColumns.hasText}) as rowsWithText,
-    sum(${barColumns.textLength}) as totalTextLength,
-    max(${barColumns.textLength}) as maxTextLength
-  FROM ${barTable}
-  GROUP BY toDayOfMonth(utcTimestamp)
-  `,
-  selectTables: [barTable],
-});

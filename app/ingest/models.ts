@@ -49,12 +49,3 @@ export const BarPipeline = new IngestPipeline<Bar>("Bar", {
   stream: true, // Buffer processed records
   ingest: false, // No API; only derive from processed Foo records
 });
-
-export const FooPipeline2 = new IngestPipeline<Foo>("Foo2", {
-  table: true, // No table; only stream raw records
-  stream: true, // Buffer ingested records
-  ingest: true, // POST /ingest/Foo
-  deadLetterQueue: {
-    destination: deadLetterTable,
-  },
-});
