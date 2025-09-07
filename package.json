@@ -5,16 +5,16 @@
     "moose": "moose-cli",
     "build": "moose-cli build --docker",
     "dev": "PLAYWRIGHT_BROWSERS_PATH=0 moose-cli dev",
-    "postinstall": "PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install --with-deps chromium"
+    "postinstall": "PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install chromium"
   },
   "dependencies": {
-    "@514labs/moose-lib": "0.6.17",
+    "@514labs/moose-lib": "0.6.34",
     "axios": "^1.7.7",
     "chromium": "^3.0.3",
     "playwright": "^1.46.0"
   },
   "devDependencies": {
-    "@514labs/moose-cli": "0.6.17",
+    "@514labs/moose-cli": "0.6.34",
     "@faker-js/faker": "^9.7.0",
     "@types/node": "^20.12.12"
   }
