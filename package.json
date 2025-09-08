@@ -11,7 +11,9 @@
     "@514labs/moose-lib": "0.6.35",
     "axios": "^1.7.7",
     "chromium": "^3.0.3",
-    "playwright": "^1.46.0"
+    "playwright": "^1.46.0",
+    "ts-patch": "^3.3.0",
+    "typia": "^9.6.1"
   },
   "devDependencies": {
     "@514labs/moose-cli": "0.6.35",

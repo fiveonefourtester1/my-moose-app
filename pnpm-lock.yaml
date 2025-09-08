@@ -20,6 +20,12 @@ importers:
       playwright:
         specifier: ^1.46.0
         version: 1.55.0
+      ts-patch:
+        specifier: ^3.3.0
+        version: 3.3.0
+      typia:
+        specifier: ^9.6.1
+        version: 9.7.2(@types/node@20.19.13)(typescript@5.9.2)
     devDependencies:
       '@514labs/moose-cli':
         specifier: 0.6.35
