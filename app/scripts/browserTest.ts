@@ -17,6 +17,8 @@ export const browsertesttask = new Task<null, void>("browsertesttask", {
         hasText: true,
         textLength: 42,
       }]);
+
+      console.log(`Tests finished`);
     } catch (error) {
       console.error('Error occurred while running browser test:', error);
     }
@@ -29,5 +31,5 @@ export const browsertestworkflow = new Workflow("browsertestworkflow", {
   startingTask: browsertesttask,
   retries: 1,
   timeout: "30s",
-  // schedule: '*/5 * * * *',
+  // schedule: '*/15 * * * *',
 });

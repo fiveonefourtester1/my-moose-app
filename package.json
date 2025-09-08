@@ -8,7 +8,7 @@
     "postinstall": "PLAYWRIGHT_BROWSERS_PATH=0 playwright install --with-deps chromium"
   },
   "dependencies": {
-    "@514labs/moose-lib": "0.6.35",
+    "@514labs/moose-lib": "0.6.37",
     "axios": "^1.7.7",
     "chromium": "^3.0.3",
     "playwright": "^1.46.0",
@@ -16,7 +16,7 @@
     "typia": "^9.6.1"
   },
   "devDependencies": {
-    "@514labs/moose-cli": "0.6.35",
+    "@514labs/moose-cli": "0.6.37",
     "@faker-js/faker": "^9.7.0",
     "@types/node": "^20.12.12"
   }
