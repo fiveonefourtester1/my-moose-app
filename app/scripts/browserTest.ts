@@ -19,5 +19,4 @@ export const browsertestworkflow = new Workflow("browsertestworkflow", {
   startingTask: browsertesttask,
   retries: 1,
   timeout: "30s",
-//   schedule: "@every 10s",
 });
