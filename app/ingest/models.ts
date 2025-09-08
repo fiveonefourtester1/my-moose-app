@@ -49,3 +49,7 @@ export const BarPipeline = new IngestPipeline<Bar>("Bar", {
   stream: true, // Buffer processed records
   ingest: false, // No API; only derive from processed Foo records
 });
+
+export const BarOlapOnlyTable = new OlapTable<Bar>("BarOlapOnly", {
+  orderByFields: ["primaryKey"],
+});

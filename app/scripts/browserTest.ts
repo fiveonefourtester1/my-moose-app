@@ -1,5 +1,5 @@
 import { Task, Workflow } from "@514labs/moose-lib";
-import { BarPipeline } from "../ingest/models";
+import { BarOlapOnlyTable } from "../ingest/models";
 import { chromium } from 'playwright';
 
 export const browsertesttask = new Task<null, void>("browsertesttask", {
@@ -11,7 +11,7 @@ export const browsertesttask = new Task<null, void>("browsertesttask", {
       await browser.close();
 
       console.log(`Testing direct insert`);
-      await BarPipeline.table!.insert([{
+      await BarOlapOnlyTable.insert([{
         primaryKey: "test-key",
         utcTimestamp: new Date(),
         hasText: true,
