@@ -3,6 +3,7 @@ import {
   Key,
   OlapTable,
   DeadLetterModel,
+  DateTime,
 } from "@514labs/moose-lib";
 
 /**
@@ -22,7 +23,7 @@ export interface Foo {
 /** Analyzed text metrics derived from Foo */
 export interface Bar {
   primaryKey: Key<string>; // From Foo.primaryKey
-  utcTimestamp: Date; // From Foo.timestamp
+  utcTimestamp: DateTime; // From Foo.timestamp
   hasText: boolean; // From Foo.optionalText?
   textLength: number; // From Foo.optionalText.length
 }
@@ -37,7 +38,7 @@ export const deadLetterTable = new OlapTable<DeadLetterModel>("FooDeadLetter", {
 export const FooPipeline = new IngestPipeline<Foo>("Foo", {
   table: false, // No table; only stream raw records
   stream: true, // Buffer ingested records
-  ingest: true, // POST /ingest/Foo
+  ingestApi: true, // POST /ingest/Foo
   deadLetterQueue: {
     destination: deadLetterTable,
   },
@@ -47,9 +48,5 @@ export const FooPipeline = new IngestPipeline<Foo>("Foo", {
 export const BarPipeline = new IngestPipeline<Bar>("Bar", {
   table: true, // Persist in ClickHouse table "Bar"
   stream: true, // Buffer processed records
-  ingest: false, // No API; only derive from processed Foo records
-});
-
-export const BarOlapOnlyTable = new OlapTable<Bar>("BarOlapOnly", {
-  orderByFields: ["primaryKey"],
+  ingestApi: false, // No API; only derive from processed Foo records
 });
