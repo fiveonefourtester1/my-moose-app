@@ -27,5 +27,5 @@ export const workflow = new Workflow("generator", {
   startingTask: ingest,
   retries: 1,
   timeout: "30s",
-  schedule: "@every 15m",
+  schedule: "@every 30m",
 });
