@@ -55,5 +55,5 @@ ignore_patterns = []
 
 [features]
 streaming_engine = true
-workflows = true
+workflows = false
 apis = true
